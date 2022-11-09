@@ -3,7 +3,7 @@ const ftoc = function(f) {
   let c = (f - 32) * (5 / 9);
   
   if (!(Number.isInteger(c))) {
-    c = c.toFixed(1);
+    c = Number(c.toFixed(1));
   }
   
   return c;
