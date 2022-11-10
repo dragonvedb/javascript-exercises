@@ -36,8 +36,11 @@ const power = function(x, n) {
   return x;
 };
 
-const factorial = function() {
-	
+const factorial = function(n) {
+  if (n === 1 || n === 0) return 1;
+
+  n *= factorial(n - 1);
+  return n;
 };
 
 // Do not edit below this line
