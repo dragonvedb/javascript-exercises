@@ -18,7 +18,13 @@ const palindromes = function (str) {
         }
     }
 
-    return;
+    for (let i = 0; i < (str.length - 1) - i; i++) {
+        if (str[i] != str[str.length - 1 - i]) {
+            return false;
+        }
+    }
+
+    return true;
 };
 
 // Do not edit below this line
