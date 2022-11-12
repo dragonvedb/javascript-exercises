@@ -16,7 +16,7 @@ const findTheOldest = function(people) {
 
         return oldest;
 
-    })
+    }, 0)
     
     return oldestPerson;
 };
