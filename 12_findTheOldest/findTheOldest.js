@@ -3,12 +3,10 @@ const findTheOldest = function(people) {
     let oldestPerson = people.reduce(function(oldest, person) {
 
         let startAge = person.yearOfBirth;
-        let stopAge;
+        let stopAge = person.yearOfDeath;
 
         if (person.yearOfDeath === undefined) {
             stopAge = new Date().getFullYear();
-        } else {
-            stopAge = person.yearOfDeath;
         }
 
         if (stopAge - startAge > highestAge) {
