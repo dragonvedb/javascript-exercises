@@ -13,7 +13,7 @@ const caesar = function(string, shift) {
         if ((utcCode + shift) > 90) {
             return capitalLet(64, (utcCode + shift) - 90);
         } else if ((utcCode + shift) < 65) {
-            return capitalLet(91, 65 - (utcCode + shift));
+            return capitalLet(91, -65 + (utcCode + shift));
         } else {
             return utcCode + shift;
         }
@@ -23,7 +23,7 @@ const caesar = function(string, shift) {
         if ((utcCode + shift) > 122) {
             return capitalLet(96, (utcCode + shift) - 122);
         } else if ((utcCode + shift) < 97) {
-            return capitalLet(123, 97 - (utcCode + shift));
+            return capitalLet(123, -97 + (utcCode + shift));
         } else {
             return utcCode + shift;
         }

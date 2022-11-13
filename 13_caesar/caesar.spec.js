@@ -10,7 +10,7 @@ test('works with phrases', () => {
   expect(caesar('Hello, World!', 5)).toBe('Mjqqt, Btwqi!');
 });
 test('works with negative shift', () => {
-  expect(caesar('Mjqqt, Bbtwqi!', -5)).toBe('Hello, World!');
+  expect(caesar('Mjqqt, Btwqi!', -5)).toBe('Hello, World!');
 });
 test.skip('wraps', () => {
   expect(caesar('Z', 1)).toBe('A');
