@@ -21,9 +21,9 @@ const caesar = function(string, shift) {
 
     function smallLet(utcCode, shift) {
         if ((utcCode + shift) > 122) {
-            return capitalLet(96, (utcCode + shift) - 122);
+            return smallLet(96, (utcCode + shift) - 122);
         } else if ((utcCode + shift) < 97) {
-            return capitalLet(123, -97 + (utcCode + shift));
+            return smallLet(123, -97 + (utcCode + shift));
         } else {
             return utcCode + shift;
         }
