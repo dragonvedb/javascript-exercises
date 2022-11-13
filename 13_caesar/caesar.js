@@ -9,6 +9,10 @@ const caesar = function(string, shift) {
 
     const newString = [];
 
+// FINISH SHIFT ANONYMOUS FUNCTIONS THAT WOULD
+// ACCOUNT FOR OVERSHIFT!!!
+
+
     for (const utcCode of utcString) {
 
         let newChar;
@@ -24,7 +28,7 @@ const caesar = function(string, shift) {
         newString.push(newChar);
     }
 
-    return newString.join();
+    return newString.join('');
 
 };
 
