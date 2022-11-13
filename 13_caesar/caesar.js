@@ -9,6 +9,22 @@ const caesar = function(string, shift) {
 
     const newString = [];
 
+    for (const utcCode of utcString) {
+        let newChar;
+
+        if (65 <= utcCode && utcCode <= 90) {
+            newChar = capitalLet(utcCode, shift); 
+            newChar = String.fromCharCode(newChar);
+        } else if (97 <= utcCode && utcCode <= 122) {
+            newChar = smallLet(utcCode, shift); 
+            newChar = String.fromCharCode(newChar);
+        } else {
+            newChar = String.fromCharCode(utcCode);
+        }
+
+        newString.push(newChar);
+    }
+
     function capitalLet(utcCode, shift) {
         if ((utcCode + shift) > 90) {
             return capitalLet(64, (utcCode + shift) - 90);
@@ -29,26 +45,7 @@ const caesar = function(string, shift) {
         }
     }
 
-
-    for (const utcCode of utcString) {
-
-        let newChar;
-
-        if (65 <= utcCode && utcCode <= 90) {
-            newChar = capitalLet(utcCode, shift); 
-            newChar = String.fromCharCode(newChar);
-        } else if (97 <= utcCode && utcCode <= 122) {
-            newChar = smallLet(utcCode, shift); 
-            newChar = String.fromCharCode(newChar);
-        } else {
-            newChar = String.fromCharCode(utcCode);
-        }
-
-        newString.push(newChar);
-    }
-
     return newString.join('');
-
 };
 
 // Do not edit below this line
