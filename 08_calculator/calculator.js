@@ -10,7 +10,7 @@ const multiply = arr => arr.reduce(function(accumulator, num) {
   return accumulator * num;
 }, 1)
 
-const power = function(x, n) {
+const power = (x, n) => {
 	const init = x;
   
   for (let i = n; i > 1; i--) {
@@ -20,11 +20,10 @@ const power = function(x, n) {
   return x;
 };
 
-const factorial = function(n) {
+const factorial = n => {
   if (n === 1 || n === 0) return 1;
 
-  n *= factorial(n - 1);
-  return n;
+  return n *= factorial(n - 1);
 };
 
 // Do not edit below this line
