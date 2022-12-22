@@ -2,7 +2,21 @@ const palindromes = function (str) {
     str = str.toLowerCase();
     str = [...str];
 
-    for (let i = 0; i < str.length; i++) {
+    str = str.filter(char => {
+        switch (char) {
+            case ' ':
+            case ',':
+            case '.':
+            case '!':
+            case '?':
+            case '/':
+            case ':':
+            case ';':
+                return false;
+        }
+        return true;
+    })
+    /*for (let i = 0; i < str.length; i++) {
         switch (str[i]) {
             case ' ':
             case ',':
@@ -16,7 +30,7 @@ const palindromes = function (str) {
                 i--;
                 break;
         }
-    }
+    }*/
 
     for (let i = 0; i < (str.length - 1) - i; i++) {
         if (str[i] != str[str.length - 1 - i]) {
