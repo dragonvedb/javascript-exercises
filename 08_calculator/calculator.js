@@ -2,15 +2,9 @@ const add = (a, b) => a + b;
 
 const subtract = (a, b) => a - b;
 
-const sum = function(arr) {
-	let sum = 0;
-
-  for (const num of arr) {
-    sum += num;
-  }
-
-  return sum;
-};
+const sum = arr => arr.reduce(function(accumulator, num) {
+  return accumulator + num;
+}, 0)
 
 const multiply = function(arr) {
   let prod = 1;
