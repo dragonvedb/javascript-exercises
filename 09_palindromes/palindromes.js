@@ -16,30 +16,14 @@ const palindromes = function (str) {
         }
         return true;
     })
-    /*for (let i = 0; i < str.length; i++) {
-        switch (str[i]) {
-            case ' ':
-            case ',':
-            case '.':
-            case '!':
-            case '?':
-            case '/':
-            case ':':
-            case ';':
-                str.splice(i, 1);
-                i--;
-                break;
-        }
-    }*/
 
-    for (let i = 0; i < (str.length - 1) - i; i++) {
+    /*for (let i = 0; i < (str.length - 1) - i; i++) {
         if (str[i] != str[str.length - 1 - i]) {
             return false;
         }
-    }
+    }*/
 
-    return true;
-};
-
+    return ([...str].reverse().toString() == str.toString())
+}
 // Do not edit below this line
 module.exports = palindromes;
