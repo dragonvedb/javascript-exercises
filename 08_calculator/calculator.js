@@ -6,15 +6,9 @@ const sum = arr => arr.reduce(function(accumulator, num) {
   return accumulator + num;
 }, 0)
 
-const multiply = function(arr) {
-  let prod = 1;
-
-  for (const num of arr) {
-    prod *= num;
-  }
-
-  return prod;
-};
+const multiply = arr => arr.reduce(function(accumulator, num) {
+  return accumulator * num;
+}, 1)
 
 const power = function(x, n) {
 	const init = x;
